@@ -1,0 +1,336 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*Встановив основний та резервний шрифти та форовий колір для боди*/
+.body{
+  font-family: 'Roboto', sans-serif;
+  color: #212121;
+  background-color: #F5F5F5;
+  }
+/*Прибрав підкреслювання з посилань*/
+.link{
+text-decoration: none
+}
+/*Застилізував фон в Хедері*/
+.page-header{
+  background-color: #FFFFFF;
+}
+/*Прибрав точки зі списку в Хедері*/
+.header-item{
+  list-style: none
+}
+/*Застилізував Лого*/
+.logo{
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19.;
+  letter-spacing: 0.03em;
+  color: #2196F3;
+  }
+  .logo-bleck{
+  color: #000000;
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  }
+.logo-white{
+  color: #FFFFFF;
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  }
+  /*Добавив в Лого зміну кольору з використанням псевдокласів hover и focus*/
+  .logo:hover,
+  .logo:focus{
+  color: blue;
+  text-decoration: underline;
+  }
+  .logo-bleck:hover,
+  .logo-bleck:focus{
+  color: blue;
+  text-decoration: underline;
+  }
+  .logo-white:hover,
+  .logo-white:focus{
+  color: blue;
+  text-decoration: underline;
+  }
+  /*Добавив логотипу властивість hover і fokus у вигляді зміни кольору*/
+
+.header-link-blue:hover,
+.header-link-blue:focus{
+  color: #2196F3;
+  text-decoration: underline;
+}
+.header-link:hover,
+.header-link:focus{
+  color: #2196F3;
+  text-decoration: underline;
+}
+/*Застилізував Хедер посилання*/
+.header-link{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #212121;
+  }
+.header-link-blue{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color:  #2196F3;
+  }
+.header-link-mail{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+  }
+  .header-link-phone{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+.header-mail{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+/*Добавив в мейл та телефон хедера властивість hover і fokus у вигляді зміни кольору*/
+.header-link-mail:hover,
+.header-link-mail:focus{
+color: #2196F3;
+text-decoration: underline;
+}
+
+.header-link-phone:hover,
+.header-link-phone:focus{
+color: #2196F3;
+text-decoration: underline;
+}
+/*Застилізував фон в Хиро на сторінці Головна*/
+.hero{
+  background-color: #2F303A;
+}
+/*Застилізував заголовок h1 в Хиро*/
+.hero-title{
+font-weight: 900;
+font-size: 44px;
+line-height: 1.36;
+letter-spacing: 0.06em;
+color: #FFFFFF;
+}
+/*Застилізував кнопку Хіро на сторінці Головна*/
+.btn{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  background-color:#2196F3;
+}
+/*Добавив на кнопку Хиро властивість hover і fokus у вигляді зміни кольору*/
+.btn:hover,
+.btn:focus{
+background-color: #FFFFFF;
+color: #2196F3;
+}
+.visually-hidden{
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; 
+}
+/*Застилізував фон розділу Наші переваги*/
+.advances{
+  background-color: #F5F5F5;;
+}
+/*Застилізував заголовки h3 розділу Наші переваги*/
+.advances-title{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #212121;
+  }
+/*Застилізував текст p розділу Наші переваги*/
+.advances-text{
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+/*Прибрав крапки в розділі Наші переваги*/
+.advances-list{
+  list-style:none;
+}
+.about-title{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+/*Прибрав крапки та застилізував фон в розділі фото чим ми займаємось*/
+.about-list{
+  list-style: none;
+  background-color: #F5F5F5;
+}
+/*Застилізував фон розділу Фото нашої команди*/
+.team-list{
+  background-color:#F5F4FA;
+}
+/*Прибрав крапки у списку членів команди, та застилізував фон фото членів команди*/
+.team-item{
+  list-style: none;
+  background-color: #FFFFFF;
+}
+/*Застилізував заголовки h2 та h3, що зверху та під фото членів команди*/
+.team-title-all{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.team-title{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+/*Застилізував тексти p, що під фото членів команди*/
+.team-text{
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+/*Застилізував блок з 5 кнопок в розділі Портфоліо*/
+  .button{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background-color: #F5F4FA;
+}
+/*Прибрав крапки з Li в розділі з 5 кнопками в Портфоліо*/
+.button-list{
+  list-style: none;
+}
+/*Добавив на 5 кнопок з Портфоліо властивість hover і fokus у вигляді зміни кольору*/
+.button:hover,
+.button:focus{
+  color: #FFFFFF;
+  background: #2196F3;
+}
+/*Застилізував колір навколо 5 кнопок, фон*/
+.button-item{
+  background-color: #F5F5F5;
+  }
+/*Застилізував заголовки H2 в розділі 9 проектів Портфоліо*/
+.projects-title{
+font-weight: 700;
+font-size: 18px;
+line-height: 2.00;
+letter-spacing: 0.06em;
+color: #212121;
+}
+/*Застилізував текст в розділі 9 проектів Портфоліо*/
+.projects-text{
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+/*Застилізував фон навколо 9 посилань Портфоліо*/
+.projects-list{
+  background-color:#F5F5F5;
+  list-style: none;
+}
+/*Добавив на 9 посилань з Портфоліо властивість hover і fokus у вигляді зміни кольору*/
+.projekts-link:hover,
+.projekts-link:focus{
+  color: #FFFFFF;
+  background: #2196F3;
+  text-decoration: underline;
+  box-shadow: #f50b0b;
+}
+/*Застилізував фон Футера*/
+.footer{
+  background-color: #2F303A;
+  }
+  /*Прибрав властивість Italic в адресі Футера*/
+.footer-adress{
+  font-style: normal;
+}
+/*Прибрав крапки зі списку Футера*/
+.footer-list{
+  list-style: none;
+}
+/*Застилізував адресу у Футері*/
+.footer-link-adress{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+/*Добавив на футер на посилання властивість hover і fokus у вигляді зміни кольору*/
+.footer-link-adress:hover,
+.footer-link-adress:focus{
+  color: #2196F3;
+  text-decoration: underline;
+}
+.footer-link-mail:hover,
+.footer-link-mail:focus{
+  color: #2196F3;
+  text-decoration: underline;
+}
+.footer-link-phone:hover,
+.footer-link-phone:focus{
+  color: #2196F3;
+  text-decoration: underline;
+}
+/*Застилізував електронку та телефон у Футері*/
+.footer-link-mail{
+  font-family:'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-link-phone{
+  font-family:'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
