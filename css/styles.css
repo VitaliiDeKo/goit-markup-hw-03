@@ -1,34 +1,108 @@
+html{
+  box-sizing: border-box;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin: 0;
+}
+ul{
+  margin: 0;
+  padding-left: 0;
+}
+button{
+  cursor: pointer;
+}
+address{
+  font-style: normal;
+}
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
-/*Встановив основний та резервний шрифти та форовий колір для боди*/
-.body{
+/*Встановив основний та резервний шрифти та фоновий колір для боди*/
+body{
+  margin: 0;
   font-family: 'Roboto', sans-serif;
   color: #212121;
   background-color: #F5F5F5;
-  }
+}
 /*Прибрав підкреслювання з посилань*/
 .link{
 text-decoration: none
 }
-/*Застилізував фон в Хедері*/
+/*Застилізував фон в Хедері*, верхній та нижній паддінги*/
 .page-header{
   background-color: #FFFFFF;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+/*Поставив в строку три елементи списку в хедері*/
+.header-list,
+.header-list-adress{
+  display: flex;
+}
+
+.header-list li,
+.header-list-adress li{
+outline: 2px solid #f50b0b;
+padding-top: 32px;
+padding-bottom: 32px;
+text-align: center;
+}
+/*Встановив марджини 50 між студія, портфоліо, контакти*/
+/*.header-list .header-item {
+  display: block;
+  margin-right: 50px;
+}*/
+/*Встановив марджини 50 між студія, портфоліо, контакти*/
+.header-list-adress .header-item,
+.header-list .header-item{
+  display: block;
+  /*margin-right: 50px;*/
+  }
+  /*.header-list .header-item + .header-item{
+    margin-left: 50;
+  }*/
+.header-list-adress .header-item:not(:last-child){
+margin-right: 50px;
+}
+.header-list .header-item:not(:last-child){
+margin-right: 50px;
+}
+/*.header-list .header-item {
+  display: block;
+  margin-right: 50px;
 }
 /*Прибрав точки зі списку в Хедері*/
 .header-item{
   list-style: none
 }
+.studio{
+  margin-left: 93px;
+}
+/*.header-list .header-item {
+  display: block;
+  margin-right: 50px;
+}*/
 /*Застилізував Лого*/
 .logo{
+  display: block;
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19.;
   letter-spacing: 0.03em;
   color: #2196F3;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-right: 0;
+  outline: 2px solid #f50b0b;
   }
   .logo-bleck{
   color: #000000;
@@ -36,6 +110,8 @@ text-decoration: none
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-right: 0;
+  outline: 2px solid #f50b0b;
   }
 .logo-white{
   color: #FFFFFF;
@@ -47,18 +123,20 @@ text-decoration: none
   /*Добавив в Лого зміну кольору з використанням псевдокласів hover и focus*/
   .logo:hover,
   .logo:focus{
-  color: blue;
-   }
+  color: #2196F3;
+  }
   .logo-bleck:hover,
   .logo-bleck:focus{
-  color: blue;
-    }
+  color: #2196F3;
+  }
   .logo-white:hover,
   .logo-white:focus{
-  color: blue;
-    }
+  color: #2196F3;
+  }
+  .top{
+  margin-right: 93px;
+  }
   /*Добавив логотипу властивість hover і fokus у вигляді зміни кольору*/
-
 .header-link-blue:hover,
 .header-link-blue:focus{
   color: #2196F3;
@@ -88,6 +166,7 @@ text-decoration: none
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
+  margin-left: 344px;
   }
   .header-link-phone{
   font-weight: 500;
@@ -108,25 +187,58 @@ text-decoration: none
 .header-link-mail:focus{
 color: #2196F3;
 }
-
+/*Визначив колір в ховері і в фокусі на посилання з номером телефону в хедері*/
 .header-link-phone:hover,
 .header-link-phone:focus{
 color: #2196F3;
 }
+.head-nav{
+  display: flex;
+}
+/*Відцентровано елементи, що розміщуються посередині*/
+.centered{
+  text-align: center;
+}
+/*Обгорнув хедер в контейнер задав початкові параметри, відцентрував посередині марджинами*/
+.container{
+width: 1230px;
+padding-left: 15px;
+padding-right: 15px;
+margin: 0 auto;
+outline: 2px solid #f50b0b;
+/*margin-left: auto;
+margin-right: auto;
+outline: 2px solid #f50b0b;*/
+}
 /*Застилізував фон в Хиро на сторінці Головна*/
 .hero{
   background-color: #2F303A;
+  align-items: center;
 }
-/*Застилізував заголовок h1 в Хиро*/
+/*!!!! максимальна ширина не визначена! 
+Застилізував заголовок h1 в Хиро*/
 .hero-title{
+display: inline-block;
 font-weight: 900;
 font-size: 44px;
 line-height: 1.36;
 letter-spacing: 0.06em;
 color: #FFFFFF;
+max-width: px;
+text-align: center;
+padding-top: 200px;
+padding-left: 200px;
+padding-right: 200px;
+padding-bottom: 30px;
 }
 /*Застилізував кнопку Хіро на сторінці Головна*/
 .btn{
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-bottom: 210px;
+  margin-left: 480px;
+  margin-right: 480px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -135,7 +247,9 @@ color: #FFFFFF;
   letter-spacing: 0.06em;
   color: #FFFFFF;
   background-color:#2196F3;
-}
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  }
 /*Добавив на кнопку Хиро властивість hover і fokus у вигляді зміни кольору*/
 .btn:hover,
 .btn:focus{
@@ -164,6 +278,8 @@ color: #2196F3;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #212121;
+  margin-bottom: 10px;
+  margin-top: 94px;
   }
 /*Застилізував текст p розділу Наші переваги*/
 .advances-text{
@@ -171,7 +287,8 @@ color: #2196F3;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
-}
+  max-width: 270px;
+  }
 /*Прибрав крапки в розділі Наші переваги*/
 .advances-list{
   list-style:none;
@@ -182,12 +299,16 @@ color: #2196F3;
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 50px;
 }
 /*Прибрав крапки та застилізував фон в розділі фото чим ми займаємось*/
 .about-list{
   list-style: none;
   background-color: #F5F5F5;
-}
+  }
+  .about-item{
+    margin-bottom: 94px;
+  }
 /*Застилізував фон розділу Фото нашої команди*/
 .team-list{
   background-color:#F5F4FA;
@@ -204,6 +325,7 @@ color: #2196F3;
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 50px;
 }
 .team-title{
   font-weight: 500;
@@ -211,6 +333,7 @@ color: #2196F3;
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 10px;
 }
 /*Застилізував тексти p, що під фото членів команди*/
 .team-text{
@@ -218,21 +341,30 @@ color: #2196F3;
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-bottom: 30px;
 }
-/*Застилізував блок з 5 кнопок в розділі Портфоліо*/
+/*Застилізував блок з 5 кнопок в розділі Портфоліо,
+ вирівняв текст в кнопках, зробив кнопки блочними елементами,
+ */
   .button{
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  background-color: #F5F4FA;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 6px 22px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    background-color: #F5F4FA;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*Прибрав крапки з Li в розділі з 5 кнопками в Портфоліо*/
 .button-list{
   list-style: none;
+  margin-top: 91px;
+  margin-bottom: 39px;
 }
 /*Добавив на 5 кнопок з Портфоліо властивість hover і fokus у вигляді зміни кольору*/
 .button:hover,
@@ -252,6 +384,8 @@ font-size: 18px;
 line-height: 2.00;
 letter-spacing: 0.06em;
 color: #212121;
+margin-top: 20px;
+margin-bottom: 4px;
 }
 /*Застилізував текст в розділі 9 проектів Портфоліо*/
 .projects-text{
@@ -261,6 +395,7 @@ color: #212121;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-bottom: 20px;
 }
 
 /*Застилізував фон навколо 9 посилань Портфоліо*/
@@ -324,4 +459,22 @@ color: #212121;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  }
+/*Встановив верх и ниж паддінги на логотипі в футері на обох сторінках*/
+.logfut{
+  padding-top: 60px;
+  padding-bottom: 20px;
+  }
+.logo,
+.logo-white,
+.logo-bleck{
+  margin-right: 0;
+  padding-right: 0;
 }
+.link-phone{
+  margin-bottom: 60px;
+  }
+.footer-item{
+display: block;
+}
+
