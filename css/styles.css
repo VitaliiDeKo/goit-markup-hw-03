@@ -13,6 +13,7 @@ margin: 0;
 ul{
   margin: 0;
   padding-left: 0;
+  list-style: none;
 }
 button{
   cursor: pointer;
@@ -36,7 +37,7 @@ text-decoration: none
   background-color: #FFFFFF;
   padding-top: 0;
   padding-bottom: 0;
-  border-bottom: 1px solid #ECECEC;;
+  border-bottom: 1px solid #ECECEC;
 }
 /*Поставив в строку три елементи списку в хедері*/
 .header-list-adress{
@@ -63,7 +64,6 @@ text-decoration: none
 та нижні паддінги та відцентровано флекс-елементи*/
 .header-list li,
 .header-list-adress li{
-outline: 2px solid #f50b0b;
 padding-top: 32px;
 padding-bottom: 32px;
 text-align: center;
@@ -82,15 +82,10 @@ margin-right: 50px;
 .header-list .header-item:not(:last-child){
 margin-right: 50px;
 }
-/*.header-list .header-item {
-  display: block;
-  margin-right: 50px;
-}
 /*Прибрав точки зі списку в Хедері*/
 .header-item{
   list-style: none
-  display: block;
-}
+ }
 .studio{
   margin-left: 0;
 }
@@ -117,7 +112,6 @@ margin-right: 50px;
   padding-top: 0;
   padding-bottom: 0;
   margin-right: 0;
-  outline: 2px solid #f50b0b;
   }
   .logo-bleck{
   color: #000000;
@@ -126,7 +120,6 @@ margin-right: 50px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   margin-right: 0;
-  outline: 2px solid #f50b0b;
   }
 .logo-white{
   color: #FFFFFF;
@@ -208,13 +201,16 @@ color: #2196F3;
 .header-link-phone:focus{
 color: #2196F3;
 }
+/*Задано бекграунд колор Мейну*/
+.main{
+  background-color: #F5F5F5;
+}
 /*Обгорнув хедер в контейнер задав початкові параметри, відцентрував посередині марджинами*/
 .container{
 width: 1200px;
 padding-left: 15px;
 padding-right: 15px;
 margin: 0 auto;
-outline: 2px solid #f50b0b;
 }
 /*Застилізував фон в Хиро на сторінці Головна*/
 .hero{
@@ -321,32 +317,32 @@ color: #2196F3;
 /*Прибрав крапки та застилізував фон в розділі фото чим ми займаємось*/
 .about-list{
   list-style: none;
-  background-color: #F5F5F5;
   display: flex;
   }
-  .about{
-    padding-bottom: 94px;
-    display: flex;
+.about{
+  padding-bottom: 94px;
+  display: flex;
+  background-color: #F5F5F5;
     }
-  .about-item{
-    display: flex;
+.about-item{
+  display: flex;
   }
-  .about-list .about-item:not(:last-child) {
-    margin-right: 30px;
+.about-list .about-item:not(:last-child) {
+  margin-right: 30px;
   }
-  .team{
-    padding-bottom: 94px;
-    display: flex;
+.team{
+  padding-top: 94px;
+  padding-bottom: 94px;
+  display: flex;
+  background-color: #F5F4FA;
   }
-/*Застилізував фон розділу Фото нашої команди*/
+/*Виставив в лінію Фото нашої команди*/
 .team-list{
-  background-color:#F5F4FA;
   display: flex;
 }
 /*Прибрав крапки у списку членів команди, та застилізував фон фото членів команди*/
 .team-item{
   list-style: none;
-  background-color: #FFFFFF;
   display: block;
   max-width: 270px;
 }
@@ -381,23 +377,31 @@ color: #2196F3;
 /*Застилізував блок з 5 кнопок в розділі Портфоліо,
 вирівняв текст в кнопках, зробив кнопки блочними елементами,
  */
+.but-projects{
+  padding: 94px 0;
+  background-color: #F5F5F5;
+}
   .button{
+  display: inline-block;
+  padding: 6px 22px;
+  font-family: 'Roboto';
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  background-color: #F5F4FA;
+  background: #F5F4FA;
+  border-radius: 4px;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*Прибрав крапки з Li в розділі з 5 кнопками в Портфоліо*/
 .button-list{
   list-style: none;
-  margin-top: 91px;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin-bottom: 55px;
   align-items: flex-start;
   display: flex;
+  justify-content: center;
   }
 .button-list .button-item:not(:last-child){
   margin-right: 8px;
@@ -406,7 +410,7 @@ color: #2196F3;
 justify-content: center;
 }
 .button-container{
-  display: flex;
+  display: block;
 }
 /*Добавив на 5 кнопок з Портфоліо властивість hover і fokus у вигляді зміни кольору*/
 .button:hover,
@@ -443,18 +447,21 @@ margin-bottom: 4px;
 
 /*Застилізував фон навколо 9 посилань Портфоліо*/
 .projects-list{
-  background-color:#F5F5F5;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
+}
+.borders{
+  border-bottom: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
 }
 /*Добавив на 9 посилань з Портфоліо властивість hover і fokus у вигляді зміни кольору*/
-.projekts-link:hover,
+/*.projekts-link:hover,
 .projekts-link:focus{
   color: #FFFFFF;
-  background: #2196F3;
-  box-shadow: #f50b0b;
-}
+  background: #2196F3;*/
 /*Застилізував фон Футера, 
 встановив верхній та нижній паддінги*/
 .footer{
