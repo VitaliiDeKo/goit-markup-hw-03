@@ -20,11 +20,6 @@ button{
 address{
   font-style: normal;
 }
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 /*Встановив основний та резервний шрифти та фоновий колір для боди*/
 body{
   margin: 0;
@@ -39,15 +34,33 @@ text-decoration: none
 /*Застилізував фон в Хедері*, верхній та нижній паддінги*/
 .page-header{
   background-color: #FFFFFF;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid #ECECEC;;
 }
 /*Поставив в строку три елементи списку в хедері*/
-.header-list,
 .header-list-adress{
   display: flex;
+  align-items: center;
+  padding-right: 0;
 }
-
+/*Задали флекс контейнеру в хедері та 
+вирівняли елементи вздовж осі*/
+.header-container{
+  display: flex;
+  align-items: center;
+  }
+.head-nav{
+  display: flex;
+  align-items: center;
+  }
+.header-list{
+  display: flex;
+  align-items: center;
+  padding-right: 344px;
+}
+/*Від списка до елемента в хедері задано верхні 
+та нижні паддінги та відцентровано флекс-елементи*/
 .header-list li,
 .header-list-adress li{
 outline: 2px solid #f50b0b;
@@ -55,12 +68,6 @@ padding-top: 32px;
 padding-bottom: 32px;
 text-align: center;
 }
-/*Встановив марджини 50 між студія, портфоліо, контакти*/
-/*.header-list .header-item {
-  display: block;
-  margin-right: 50px;
-}*/
-/*Встановив марджини 50 між студія, портфоліо, контакти*/
 .header-list-adress .header-item,
 .header-list .header-item{
   display: block;
@@ -82,15 +89,23 @@ margin-right: 50px;
 /*Прибрав точки зі списку в Хедері*/
 .header-item{
   list-style: none
+  display: block;
 }
 .studio{
-  margin-left: 93px;
+  margin-left: 0;
 }
 /*.header-list .header-item {
   display: block;
   margin-right: 50px;
 }*/
-/*Застилізував Лого*/
+/*Застилізував Лого, 
+встановив праві марджини та паддінг на логотип в футері на обох сторінках*/
+.logo,
+.logo-white,
+.logo-bleck {
+  margin-right: 0;
+  padding-right: 0;
+}
 .logo{
   display: block;
   font-family: 'Raleway';
@@ -99,8 +114,8 @@ margin-right: 50px;
   line-height: 1.19.;
   letter-spacing: 0.03em;
   color: #2196F3;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 0;
+  padding-bottom: 0;
   margin-right: 0;
   outline: 2px solid #f50b0b;
   }
@@ -133,6 +148,7 @@ margin-right: 50px;
   .logo-white:focus{
   color: #2196F3;
   }
+  
   .top{
   margin-right: 93px;
   }
@@ -166,7 +182,7 @@ margin-right: 50px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
-  margin-left: 344px;
+  margin-left: 0;
   }
   .header-link-phone{
   font-weight: 500;
@@ -192,28 +208,18 @@ color: #2196F3;
 .header-link-phone:focus{
 color: #2196F3;
 }
-.head-nav{
-  display: flex;
-}
-/*Відцентровано елементи, що розміщуються посередині*/
-.centered{
-  text-align: center;
-}
 /*Обгорнув хедер в контейнер задав початкові параметри, відцентрував посередині марджинами*/
 .container{
-width: 1230px;
+width: 1200px;
 padding-left: 15px;
 padding-right: 15px;
 margin: 0 auto;
 outline: 2px solid #f50b0b;
-/*margin-left: auto;
-margin-right: auto;
-outline: 2px solid #f50b0b;*/
 }
 /*Застилізував фон в Хиро на сторінці Головна*/
 .hero{
   background-color: #2F303A;
-  align-items: center;
+  text-align: center;
 }
 /*!!!! максимальна ширина не визначена! 
 Застилізував заголовок h1 в Хиро*/
@@ -224,8 +230,6 @@ font-size: 44px;
 line-height: 1.36;
 letter-spacing: 0.06em;
 color: #FFFFFF;
-max-width: px;
-text-align: center;
 padding-top: 200px;
 padding-left: 200px;
 padding-right: 200px;
@@ -236,14 +240,10 @@ padding-bottom: 30px;
   display: inline-block;
   border-radius: 4px;
   padding: 10px 32px;
-  margin-bottom: 210px;
-  margin-left: 480px;
-  margin-right: 480px;
+  margin-bottom: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: #FFFFFF;
   background-color:#2196F3;
@@ -268,7 +268,15 @@ color: #2196F3;
 }
 /*Застилізував фон розділу Наші переваги*/
 .advances{
-  background-color: #F5F5F5;;
+  background-color: #F5F5F5;
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+/*Встановлено максимальну 
+ширину елементу списку, щоб не розповзався*/
+.advances-item{
+  max-width: 270px;
+
 }
 /*Застилізував заголовки h3 розділу Наші переваги*/
 .advances-title{
@@ -279,7 +287,7 @@ color: #2196F3;
   text-transform: uppercase;
   color: #212121;
   margin-bottom: 10px;
-  margin-top: 94px;
+  margin-top: 0;
   }
 /*Застилізував текст p розділу Наші переваги*/
 .advances-text{
@@ -292,7 +300,16 @@ color: #2196F3;
 /*Прибрав крапки в розділі Наші переваги*/
 .advances-list{
   list-style:none;
-}
+  display: flex;
+  }
+.advances-list .advances-item:not(:last-child){
+  margin-right: 30px;
+  }
+    /*Відцентровано елементи, що розміщуються
+  посередині, зокрема Заголовок Чим ми займаємось*/
+  .centered {
+    text-align: center;
+  }
 .about-title{
   font-weight: 700;
   font-size: 36px;
@@ -305,18 +322,36 @@ color: #2196F3;
 .about-list{
   list-style: none;
   background-color: #F5F5F5;
+  display: flex;
   }
+  .about{
+    padding-bottom: 94px;
+    display: flex;
+    }
   .about-item{
-    margin-bottom: 94px;
+    display: flex;
+  }
+  .about-list .about-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .team{
+    padding-bottom: 94px;
+    display: flex;
   }
 /*Застилізував фон розділу Фото нашої команди*/
 .team-list{
   background-color:#F5F4FA;
+  display: flex;
 }
 /*Прибрав крапки у списку членів команди, та застилізував фон фото членів команди*/
 .team-item{
   list-style: none;
   background-color: #FFFFFF;
+  display: block;
+  max-width: 270px;
+}
+.team-list .team-item:not(:last-child){
+  margin-right: 30px;
 }
 /*Застилізував заголовки h2 та h3, що зверху та під фото членів команди*/
 .team-title-all{
@@ -344,27 +379,34 @@ color: #2196F3;
   margin-bottom: 30px;
 }
 /*Застилізував блок з 5 кнопок в розділі Портфоліо,
- вирівняв текст в кнопках, зробив кнопки блочними елементами,
+вирівняв текст в кнопках, зробив кнопки блочними елементами,
  */
   .button{
-    display: inline-block;
-    border-radius: 4px;
-    padding: 6px 22px;
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: #212121;
-    background-color: #F5F4FA;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background-color: #F5F4FA;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*Прибрав крапки з Li в розділі з 5 кнопками в Портфоліо*/
 .button-list{
   list-style: none;
   margin-top: 91px;
-  margin-bottom: 39px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  align-items: flex-start;
+  display: flex;
+  }
+.button-list .button-item:not(:last-child){
+  margin-right: 8px;
+}
+.menu.center{
+justify-content: center;
+}
+.button-container{
+  display: flex;
 }
 /*Добавив на 5 кнопок з Портфоліо властивість hover і fokus у вигляді зміни кольору*/
 .button:hover,
@@ -375,6 +417,7 @@ color: #2196F3;
 /*Застилізував колір навколо 5 кнопок, фон*/
 .button-item{
   background-color: #F5F5F5;
+  display: inline-block;
   }
 /*Застилізував заголовки H2 в розділі 9 проектів Портфоліо*/
 .projects-title{
@@ -402,6 +445,8 @@ margin-bottom: 4px;
 .projects-list{
   background-color:#F5F5F5;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 /*Добавив на 9 посилань з Портфоліо властивість hover і fokus у вигляді зміни кольору*/
 .projekts-link:hover,
@@ -410,9 +455,12 @@ margin-bottom: 4px;
   background: #2196F3;
   box-shadow: #f50b0b;
 }
-/*Застилізував фон Футера*/
+/*Застилізував фон Футера, 
+встановив верхній та нижній паддінги*/
 .footer{
   background-color: #2F303A;
+  padding-top: 60px;
+  padding-bottom: 60px;
   }
   /*Прибрав властивість Italic в адресі Футера*/
 .footer-adress{
@@ -460,21 +508,22 @@ margin-bottom: 4px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   }
-/*Встановив верх и ниж паддінги на логотипі в футері на обох сторінках*/
-.logfut{
-  padding-top: 60px;
-  padding-bottom: 20px;
-  }
-.logo,
-.logo-white,
-.logo-bleck{
-  margin-right: 0;
-  padding-right: 0;
-}
+/*Встановив праві марджини та паддінг на логотип в футері на обох сторінках*/
+
+/*Встановив нижній паддінг на самому нижньому елементі в футері
+та зробив Li елементи футерів блоковими*/
 .link-phone{
-  margin-bottom: 60px;
+  padding-bottom: 0;
   }
 .footer-item{
 display: block;
+}
+.logfut{
+  margin-bottom: 20px;
+}
+/*Встановив паддінг списку Li в футері
+за виключенням останнього елемента last-child*/
+.footer-list .footer-item:not(:last-child){
+padding-bottom: 9px;
 }
 
